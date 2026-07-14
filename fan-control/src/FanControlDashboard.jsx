@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import TemperatureHistory from "./TemperatureHistory";
 
 const ESP32_BASE_URL = "http://192.168.4.1";
 
@@ -140,7 +141,7 @@ export default function FanControlDashboard() {
             </svg>
           </div>
           <div>
-            <h1 style={{ margin: 0, fontSize: 17, fontWeight: 600, letterSpacing: "-0.02em" }}>Intelligent Fan Speed Control</h1>
+            <h1 style={{ margin: 0, fontSize: 17, fontWeight: 600, letterSpacing: "-0.02em" }}>Intelligent</h1>
             <p style={{ margin: 0, fontSize: 12, color: "#888780" }}>DHT Sensor · ESP32 AP · {ESP32_BASE_URL}</p>
           </div>
         </div>
@@ -329,7 +330,7 @@ export default function FanControlDashboard() {
           </div>
         )}
       </div>
-
+      <TemperatureHistory />
       {/* Footer */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 11, color: "#B4B2A9", marginTop: "1rem" }}>
         <span>DHT Sensor · ESP32 AP · {ESP32_BASE_URL}</span>
